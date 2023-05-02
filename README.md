@@ -2,14 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Download repo and open it with Visual Studio Code
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Add the .vscode/launch.json to your debug settings
+
+hit F5
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
