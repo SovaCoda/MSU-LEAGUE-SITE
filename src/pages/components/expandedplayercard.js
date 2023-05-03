@@ -15,11 +15,11 @@ const ExpandedPlayerCard = ({sharedExpanded, data}) => {
       }, [sharedExpanded]);
 
     return (
-        <div className={`sticky left-28  top-20 w-96 pt-0 pl-0 pr-0 pb-4 mx-0 bg-red-900 shadow-md rounded-lg opacity-100  ${
+        <div className={`sticky top-20 w-96 pb-4 justify-end mr-auto ml-4 bg-red-900 shadow-md rounded-lg opacity-100 ${
             sharedExpanded ? 'animate-fadeInRight' : 'animate-fadeOut'
         } ${
             visible ? 'block' : 'hidden'
-            }`} style={{ height: "600px"}}>
+            }`}>
             <div className="relative h-1/6 overflow-hidden rounded-t-lg ">
                 <div
                 className="absolute inset-0 bg-cover bg-center"

@@ -14,7 +14,7 @@ module.exports = {
         },
         fadeInRight: {
           '0%': { opacity: 0, transform: 'translatex(40px)' },
-          '100%': { opacity: 0.9, transform: 'translatex(0px)'},
+          '100%': { opacity: 0.9, transform: '-translatex(0px)'},
         },
         fadeInLeft: {
           '0%': { opacity: 0, transform: 'translatex(-40px)' },

@@ -14,12 +14,17 @@ export default function Home() {
       <div class="container flex items-center justify-center mt-4 mx-auto">
         <text class="text-7xl font-bold text-red-800 text-center" >MSU<br></br>League of Legends </text>
       </div>
-      
+      <div class="container flex items-center justify-center mt-48 mx-auto">
+        <text class="text-2xl font-bold text-red-800 text-center" >MEET OUR<br></br></text>
+      </div>
+      <div class="container flex items-center justify-center mt-0 mx-auto">
+        <text class="text-7xl font-bold text-red-800 text-center" >SUMMONERS</text>
+      </div>
       <PlayerCardSection/>
       
       <div class="flex items-center justify-center mt-48">
         <img src="./images/youtubelogo.png" alt="logo" class="w-16" />
-        <text class="text-7xl font-bold text-red-800 text-center ml-4 mr-4" >Watch us LIVE</text>
+        <text class="text-7xl font-bold text-red-800 text-center ml-4 mr-4" >WATCH US LIVE</text>
         <img src="./images/twitchlogo.png" alt="logo" class="w-16" />
       </div>
 

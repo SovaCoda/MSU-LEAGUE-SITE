@@ -49,11 +49,11 @@ const PlayerCardSection = () => {
     };
 
     return (
-        <div class="grid grid-cols-3 p-1 mt-4">
+        <div class="grid grid-cols-3 mt-8">
             <ExpandedPlayerCard sharedExpanded={expanded} data={expandedData}/>
-            <div class="grid grid-cols-2 w-full mx-auto col-start-2">
-                <div class="flex flex-col -translate-x-16">
-                    <text class="text-3xl font-bold text-red-800 text-left">MAROON</text>
+            <div class="grid 2xl:grid-cols-2 xl:grid-cols-1 w-full mx-auto col-start-2">
+                <div class="flex flex-col mr-4">
+                    <text class="text-3xl font-bold text-red-800 text-center">MAROON</text>
                     <PlayerCard
                         summonerName="PARAGON OF HONOR"
                         description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
@@ -131,8 +131,8 @@ const PlayerCardSection = () => {
                     />
                 </div>
                
-                <div class="flex flex-col translate-x-16">
-                    <text class="text-3xl font-bold text-red-800 text-right" >WHITE</text>
+                <div class="flex flex-col">
+                    <text class="text-3xl font-bold text-red-800 text-center" >WHITE</text>
                     <PlayerCard
                         summonerName="NOBLE"
                         description={"TODO Make white team player cards"}
