@@ -1,5 +1,6 @@
 import PlayerCardSection from "./components/playercardsection"
 import LaneSelectorSection from "./components/laneselectorsection"
+
 export default function Home() {
   return (
     <>

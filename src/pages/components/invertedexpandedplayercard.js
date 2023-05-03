@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-const ExpandedPlayerCard = ({sharedExpanded, data}) => {
+
+// @refresh reset
+const InvertedExpandedPlayerCard = ({sharedExpanded, data}) => {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -15,8 +17,8 @@ const ExpandedPlayerCard = ({sharedExpanded, data}) => {
       }, [sharedExpanded]);
 
     return (
-        <div className={`sticky left-28  top-20 w-96 pt-0 pl-0 pr-0 pb-4 mx-0 bg-red-900 shadow-md rounded-lg opacity-100  ${
-            sharedExpanded ? 'animate-fadeInRight' : 'animate-fadeOut'
+        <div className={`sticky mx-auto w-96 bg-red-800 shadow-md rounded-lg opacity-100  ${
+            sharedExpanded ? 'animate-fadeInLeft' : 'animate-fadeOutRight'
         } ${
             visible ? 'block' : 'hidden'
             }`} style={{ height: "600px"}}>
@@ -45,4 +47,4 @@ const ExpandedPlayerCard = ({sharedExpanded, data}) => {
     );
 }
 
-export default ExpandedPlayerCard;
+export default InvertedExpandedPlayerCard;

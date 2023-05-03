@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ExpandedPlayerCard from "./expandedplayercard";
+import InvertedExpandedPlayerCard from "./invertedexpandedplayercard";
 import PlayerCard from "./playercard";
 
 const PlayerCardSection = () => {
@@ -49,11 +50,10 @@ const PlayerCardSection = () => {
 
     return (
         <div class="grid grid-cols-3 p-1 mt-4">
-            <ExpandedPlayerCard sharedExpanded={expanded} data={expandedData} inverted={false} />
+            <ExpandedPlayerCard sharedExpanded={expanded} data={expandedData}/>
             <div class="grid grid-cols-2 w-full mx-auto col-start-2">
                 <div class="flex flex-col -translate-x-16">
-                <text class="text-3xl font-bold text-red-800 text-left">MAROON</text>
-
+                    <text class="text-3xl font-bold text-red-800 text-left">MAROON</text>
                     <PlayerCard
                         summonerName="PARAGON OF HONOR"
                         description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
@@ -129,7 +129,6 @@ const PlayerCardSection = () => {
 
                         selected={selectedSummoner === 'IM ENTING'}
                     />
-
                 </div>
                
                 <div class="flex flex-col translate-x-16">
@@ -207,8 +206,7 @@ const PlayerCardSection = () => {
                     />
                 </div>
             </div>
-            <ExpandedPlayerCard sharedExpanded={expanded} data={expandedData} inverted={true} inveretedSharedExpanded={invertedExpanded} invertedData={invertedExpandedData}/>
-
+            <InvertedExpandedPlayerCard sharedExpanded={invertedExpanded} data={invertedExpandedData}/>
         </div>
     );
 }
