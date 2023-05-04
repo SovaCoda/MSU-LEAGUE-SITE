@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      direction: {
+        'rtl': 'rtl',
+        'ltr': 'ltr',
+      },
       keyframes: {
         fadeIn: { 
           '0%': { opacity: 0, transform: 'translatex(-40px)' },

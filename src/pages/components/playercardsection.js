@@ -49,10 +49,10 @@ const PlayerCardSection = () => {
     };
 
     return (
-        <div class="grid grid-cols-3 mt-8">
+        <div class="grid grid-cols-4 mt-8 direction-rtr">
             <ExpandedPlayerCard sharedExpanded={expanded} data={expandedData}/>
-            <div class="grid 2xl:grid-cols-2 xl:grid-cols-1 w-full mx-auto col-start-2">
-                <div class="flex flex-col mr-4">
+            <div class="grid 2xl:grid-cols-2 xl:grid-cols-1 w-full mx-auto col-span-2 col-start-2 ">
+                <div class="flex flex-col">
                     <text class="text-3xl font-bold text-red-800 text-center">MAROON</text>
                     <PlayerCard
                         summonerName="PARAGON OF HONOR"

@@ -15,7 +15,7 @@ const PlayerCard = ({ summonerName, championImages, laneImage, inverted, onExpan
   }
 
   return (
-    <div class={`container flex flex-nowrap items-center mt-10 hover:scale-100 transition-all duration-300 cursor-pointer ${
+    <div class={`container flex flex-nowrap 2xl:w-3/4 xl:w-2/4 md:w-2/4 sm: w-2/4 items-center mx-auto mt-10 hover:scale-100 transition-all duration-300 cursor-pointer ${
       selected ? '-translate-x-4' : ''
     }`} onClick={() => handleExpand(data)}>
       <div className={`grid grid-rows-2 gap-y-0 ${
