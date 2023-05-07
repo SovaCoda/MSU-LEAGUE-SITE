@@ -55,6 +55,37 @@ const PlayerCardSection = () => {
                 <div class="flex flex-col">
                     <text class="text-3xl font-bold text-red-800 text-center">MAROON</text>
                     <PlayerCard
+                        summonerName="DRAGCOCKS"
+                        description={"Matt Wu, Dragcocks, is Maroon Team's starting top laner. He is known for his ability to play duelists and split push to victory."}
+                        rank={"challenger"}
+
+                        onExpand={handleExpand}
+
+                        championImages={['./champions/leona.png', './champions/maokai.png', './champions/nautilus.png']}
+                        laneImage="./lanes/top.png"
+                        rankImage={"./ranks/challenger.png"}
+                        bannerGif="./gifs/CamilleBG.gif"
+
+                        selected={selectedSummoner === 'DRAGCOCKS'}
+                    />
+                    
+                    
+                    <PlayerCard
+                        summonerName="IM ENTING"
+                        description={"Chris PUT CHRIS' LAST NAME HERE , Im Enting, is Maroon Team's starting jungler. He is known for his ability to play carry junglers and snowball his team to victory."}
+                        rank={"diamond"}
+
+                        onExpand={handleExpand}
+
+                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
+                        laneImage="./lanes/jungle.png"
+                        rankImage={"./ranks/diamond.png"}
+                        bannerGif="./gifs/JarvanBG.gif"
+
+                        selected={selectedSummoner === 'IM ENTING'}
+                    />
+
+                    <PlayerCard
                         summonerName="PARAGON OF HONOR"
                         description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
                         rank={"Diamond 2"}
@@ -84,7 +115,6 @@ const PlayerCardSection = () => {
                         selected={selectedSummoner === 'CARAMEL HEAVEN'}
                     />
 
-
                     <PlayerCard
                         summonerName="YUBS"
                         description={"PUT YUBS NAME HERE, Yubs, is Maroon Team's starting Support player. He is known for his ability to play engage supports and set up his team for success."}
@@ -100,35 +130,6 @@ const PlayerCardSection = () => {
                         selected={selectedSummoner === 'YUBS'}
                     />
 
-                    <PlayerCard
-                        summonerName="DRAGCOCKS"
-                        description={"Matt Wu, Dragcocks, is Maroon Team's starting top laner. He is known for his ability to play duelists and split push to victory."}
-                        rank={"challenger"}
-
-                        onExpand={handleExpand}
-
-                        championImages={['./champions/leona.png', './champions/maokai.png', './champions/nautilus.png']}
-                        laneImage="./lanes/top.png"
-                        rankImage={"./ranks/challenger.png"}
-                        bannerGif="./gifs/CamilleBG.gif"
-
-                        selected={selectedSummoner === 'DRAGCOCKS'}
-                    />
-
-                    <PlayerCard
-                        summonerName="IM ENTING"
-                        description={"Chris PUT CHRIS' LAST NAME HERE , Im Enting, is Maroon Team's starting jungler. He is known for his ability to play carry junglers and snowball his team to victory."}
-                        rank={"diamond"}
-
-                        onExpand={handleExpand}
-
-                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
-                        laneImage="./lanes/jungle.png"
-                        rankImage={"./ranks/diamond.png"}
-                        bannerGif="./gifs/JarvanBG.gif"
-
-                        selected={selectedSummoner === 'IM ENTING'}
-                    />
                 </div>
                
                 <div class="flex flex-col">
