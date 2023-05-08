@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'mobile': '270px',
+      },
       direction: {
         'rtl': 'rtl',
         'ltr': 'ltr',
