@@ -22,9 +22,9 @@ const PlayerCard = ({ summonerName, championImages, laneImage, inverted, onExpan
           inverted ? 'bg-white' : 'bg-red-900'  
         } bg-opacity-100 rounded-md shadow-2xl w-full`}style={{ gridTemplateRows: "auto minmax(0, 1fr)" }}>
         <div class="container flex justify-between ml-1 h-8">
-          <text class={`text-2xl font-bold truncate ${
+          <text class={`xl:text-xl md:text-md font-bold truncate ${
             inverted ? 'text-red-900' : 'text-white'
-          } text-left`} style={{maxWidth: "100%", width: "auto", fontSize: "1.5rem", flexShrink: "1"}}>{summonerName} </text>
+          } text-left`}>{summonerName} </text>
 
         </div>
         <div class="container flex justify-between">
