@@ -34,7 +34,6 @@ const PlayerCard = ({ inverted, onExpand, selected, data}) => {
         </div>
       </div>
     </div>
-    
   );
 }
 
