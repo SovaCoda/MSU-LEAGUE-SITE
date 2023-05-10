@@ -1,14 +1,5 @@
 import React, {useState} from 'react';
-const PlayerCard = ({ summonerName, championImages, laneImage, inverted, onExpand, rankImage, description, bannerGif, selected}) => {
-
-  const data = {
-    summonerName: summonerName,
-    championImages: championImages,
-    laneImage: laneImage,
-    rankImage: rankImage,
-    description: description,
-    bannerGif: bannerGif
-  }
+const PlayerCard = ({ inverted, onExpand, selected, data}) => {
   
   const handleExpand = (data) => {
     onExpand(data);
@@ -24,17 +15,17 @@ const PlayerCard = ({ summonerName, championImages, laneImage, inverted, onExpan
         <div class="container flex justify-between ml-1 h-8">
           <text class={`xl:text-xl md:text-md font-bold truncate ${
             inverted ? 'text-red-900' : 'text-white'
-          } text-left`}>{summonerName} </text>
+          } text-left`}>{data.summonerName} </text>
 
         </div>
         <div class="container flex justify-between">
-          <img src={laneImage} alt="" class="w-8 mb-1"/>
+          <img src={"./lanes/" + data.role + ".png"} alt="" class="w-8 mb-1"/>
           <div class="flex space-x-2 mr-1">
-            {championImages.map((championImage, index) => {
+            {data.champions.map((champion, index) => {
               return (
                 <img
                   key={index}
-                  src={championImage} 
+                  src={"./champions/" + champion + ".png"} 
                   alt="" 
                   class="w-8 mb-1 justify-start"/>
               )
