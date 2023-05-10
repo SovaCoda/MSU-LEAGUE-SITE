@@ -1,5 +1,5 @@
 import PlayerCardSection from "./components/playercardsection"
-import LaneSelectorSection from "./components/laneselectorsection"
+import MobilePlayerCardSection from "./components/mobileplayercardsection"
 
 export default function Home() {
   return (
@@ -15,14 +15,17 @@ export default function Home() {
         <text class="text-7xl font-bold text-red-800 text-center" >MSU<br></br>League of Legends </text>
       </div>
       <div class="container flex items-center justify-center mt-48 mx-auto">
-        <text class="sm:text-2xl text-md font-bold text-red-800 text-center" >MEET OUR<br></br></text>
+        <text class="sm:text-2xl text-lg font-bold text-red-800 text-center" >MEET OUR<br></br></text>
       </div>
       <div class="container flex items-center justify-center mt-0 mx-auto">
-        <text class="sm:text-7xl text-2xl font-bold text-red-800 text-center" >SUMMONERS</text>
+        <text class="sm:text-7xl text-5xl font-bold text-red-800 text-center" >SUMMONERS</text>
       </div>
 
-      <PlayerCardSection/>
       
+      <PlayerCardSection/>
+      <MobilePlayerCardSection/>
+
+
       <div class="flex items-center justify-center mt-48">
         <img src="./images/youtubelogo.png" alt="logo" class="w-16" />
         <text class="sm:text-7xl text-4xl font-bold text-red-800 text-center ml-4 mr-4" >WATCH US LIVE</text>

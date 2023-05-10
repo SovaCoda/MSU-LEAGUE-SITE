@@ -43,7 +43,6 @@ const PlayerCard = ({ summonerName, championImages, laneImage, inverted, onExpan
         </div>
       </div>
     </div>
-    
   );
 }
 
