@@ -32,22 +32,22 @@ export default function Home() {
         <img src="./images/twitchlogo.png" alt="logo" class="w-16" />
       </div>
 
-      <div class="md:flex md:flex-row flex-col justify-center mt-4 animate-fadeIn">
-        <div>
-          <iframe src="https://player.twitch.tv/?channel=msu_esports&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no" class="w-full h-64 px-4 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
-        </div>
+      <div class="md:flex md:flex-row-reverse flex-col justify-center mt-10 animate-fadeIn">
         <div class="flex flex-col items-left mt-4 mb-12">
           <text class="md:text-4xl text-2xl font-bold text-red-800 md:text-top md:text-left text-top ml-4 mr-4" >Official MSU ESPORTS</text>
           <text class="text-xl text-red-800 text-top ml-4 mr-4 md:max-w-lg max-w-none" >MSU Esports will sometimes stream our tournament matches with commentators</text>
         </div>
+        <div>
+          <iframe src="https://player.twitch.tv/?channel=msu_esports&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no" class="w-full h-64 px-4 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
+        </div>
       </div>
 
-      <div class="md:flex md:flex-row-reverse justify-center mt-4 animate-fadeIn">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/bvrPENBoTmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class ="px-4 w-full h-64 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
+      <div class="md:flex md:flex-row justify-center mt-6 animate-fadeIn">
         <div class="flex flex-col items-start mt-4 mb-12">
           <text class="md:text-4xl text-2xl font-bold text-red-800 text-top ml-4 mr-4" >Caramel Heaven's Stream</text>
           <text class="text-xl text-red-800 text-top ml-4 mr-4 md:max-w-lg max-w-none" >Our adc, Caramel Heaven, streams some of the more minor games we play.</text>
         </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bvrPENBoTmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class ="px-4 w-full h-64 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
       </div>
 
       <br></br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br></br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
