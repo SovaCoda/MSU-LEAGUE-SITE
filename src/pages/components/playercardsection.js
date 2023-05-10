@@ -2,6 +2,7 @@ import { useState } from "react";
 import ExpandedPlayerCard from "./expandedplayercard";
 import InvertedExpandedPlayerCard from "./invertedexpandedplayercard";
 import PlayerCard from "./playercard";
+import playerInfo from "../playerinfo";
 
 const PlayerCardSection = () => {
     const [expanded, setExpanded] = useState(false);
@@ -55,79 +56,34 @@ const PlayerCardSection = () => {
                 <div class="flex flex-col">
                     <text class="text-3xl font-bold text-red-800 text-center">MAROON</text>
                     <PlayerCard
-                        summonerName="DRAGCOCKS"
-                        description={"Matt Wu, Dragcocks, is Maroon Team's starting top laner. He is known for his ability to play duelists and split push to victory."}
-                        rank={"challenger"}
-
+                        data={playerInfo.maroon.top}
                         onExpand={handleExpand}
-
-                        championImages={['./champions/leona.png', './champions/maokai.png', './champions/nautilus.png']}
-                        laneImage="./lanes/top.png"
-                        rankImage={"./ranks/challenger.png"}
-                        bannerGif="./gifs/CamilleBG.gif"
-
-                        selected={selectedSummoner === 'DRAGCOCKS'}
+                        selected={selectedSummoner === playerInfo.maroon.top.summonerName}
                     />
                     
                     
                     <PlayerCard
-                        summonerName="IM ENTING"
-                        description={"Chris PUT CHRIS' LAST NAME HERE , Im Enting, is Maroon Team's starting jungler. He is known for his ability to play carry junglers and snowball his team to victory."}
-                        rank={"diamond"}
-
+                        data={playerInfo.maroon.jungle}
                         onExpand={handleExpand}
-
-                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
-                        laneImage="./lanes/jungle.png"
-                        rankImage={"./ranks/diamond.png"}
-                        bannerGif="./gifs/JarvanBG.gif"
-
-                        selected={selectedSummoner === 'IM ENTING'}
+                        selected={selectedSummoner === playerInfo.maroon.jungle.summonerName}
                     />
 
                     <PlayerCard
-                        summonerName="PARAGON OF HONOR"
-                        description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                        rank={"Diamond 2"}
-
+                        data={playerInfo.maroon.mid}
                         onExpand={handleExpand}
-
-                        championImages={['./champions/anivia.png', './champions/velkoz.png', './champions/ahri.png']}
-                        laneImage="./lanes/mid.png"
-                        rankImage="./ranks/diamond.png"
-                        bannerGif="./gifs/AniviaBG.gif"
-
-                        selected={selectedSummoner === 'PARAGON OF HONOR'}
+                        selected={selectedSummoner === playerInfo.maroon.mid.summonerName}
                     />
 
                     <PlayerCard
-                        summonerName="CARAMEL HEAVEN"
-                        description={"Caleb Thomas, CARAMEL HEAVEN is Maroon Teams starting bot laner. The ranger class is his specialty, and he is known for his ability to kite and position in teamfights."}
-                        rank={"Masters"}
-
+                        data={playerInfo.maroon.bottom}
                         onExpand={handleExpand}
-
-                        championImages={['./champions/caitlyn.png', './champions/kaisa.png', './champions/jhin.png']}
-                        laneImage="./lanes/bottom.png"
-                        rankImage={"./ranks/master.png"}
-                        bannerGif="./gifs/JhinBG.gif"
-
-                        selected={selectedSummoner === 'CARAMEL HEAVEN'}
+                        selected={selectedSummoner === playerInfo.maroon.bottom.summonerName}
                     />
 
                     <PlayerCard
-                        summonerName="YUBS"
-                        description={"PUT YUBS NAME HERE, Yubs, is Maroon Team's starting Support player. He is known for his ability to play engage supports and set up his team for success."}
-                        rank={"Masters"}
-
+                        data={playerInfo.maroon.support}
                         onExpand={handleExpand}
-
-                        championImages={['./champions/rammus.png', './champions/karma.png', './champions/thresh.png']}
-                        laneImage="./lanes/support.png"
-                        rankImage={"./ranks/master.png"}
-                        bannerGif="./gifs/ThreshBG.gif"
-
-                        selected={selectedSummoner === 'YUBS'}
+                        selected={selectedSummoner === playerInfo.maroon.support.summonerName}
                     />
 
                 </div>
@@ -135,75 +91,35 @@ const PlayerCardSection = () => {
                 <div class="flex flex-col">
                     <text class="text-3xl font-bold text-red-800 text-center" >WHITE</text>
                     <PlayerCard
-                        summonerName="NOBLE"
-                        description={"TODO Make white team player cards"}
-                        rank={"gold"}
-
+                        data={playerInfo.white.top}
                         onExpand={handleInvertedExpand}
-
-                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
-                        laneImage="./lanes/jungle.png"
-                        rankImage={"./ranks/gold.png"}
                         inverted={true}
-
-                        selected={invertedSelectedSummoner === 'NOBLE'}
+                        selected={invertedSelectedSummoner === playerInfo.white.top.summonerName}
                     />
 
                     <PlayerCard
-                        summonerName="CHIPP"
-                        description={"TODO Make white team player cards"}
-                        rank={"gold"}
-
+                        data={playerInfo.white.jungle}
                         onExpand={handleInvertedExpand}
-
-                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
-                        laneImage="./lanes/jungle.png"
-                        rankImage={"./ranks/gold.png"}
                         inverted={true}
-
-                        selected={invertedSelectedSummoner === 'CHIPP'}
+                        selected={invertedSelectedSummoner === playerInfo.white.jungle.summonerName}
                     />
                     <PlayerCard
-                        summonerName="JANE"
-                        description={"TODO Make white team player cards"}
-                        rank={"gold"}
-
+                        data={playerInfo.white.mid}
                         onExpand={handleInvertedExpand}
-
-                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
-                        laneImage="./lanes/jungle.png"
-                        rankImage={"./ranks/gold.png"}
                         inverted={true}
-
-                        selected={invertedSelectedSummoner === 'JANE'}
+                        selected={invertedSelectedSummoner === playerInfo.white.mid.summonerName}
                     />
                     <PlayerCard
-                        summonerName="GHOSTCIRCLE"
-                        description={"TODO Make white team player cards"}
-                        rank={"gold"}
-
+                        data={playerInfo.white.bottom}
                         onExpand={handleInvertedExpand}
-
-                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
-                        laneImage="./lanes/jungle.png"
-                        rankImage={"./ranks/gold.png"}
                         inverted={true}
-
-                        selected={invertedSelectedSummoner === 'GHOSTCIRCLE'}
+                        selected={invertedSelectedSummoner === playerInfo.white.bottom.summonerName}
                     />
                     <PlayerCard
-                        summonerName="ZANUF"
-                        description={"TODO Make white team player cards"}
-                        rank={"gold"}
-
+                        data={playerInfo.white.support}
                         onExpand={handleInvertedExpand}
-
-                        championImages={['./champions/lee sin.png', './champions/ekko.png', './champions/zed.png']}
-                        laneImage="./lanes/jungle.png"
-                        rankImage={"./ranks/gold.png"}
                         inverted={true}
-
-                        selected={invertedSelectedSummoner === 'ZANUF'}
+                        selected={invertedSelectedSummoner === playerInfo.white.support.summonerName}
                     />
                 </div>
             </div>
