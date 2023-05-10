@@ -35,7 +35,9 @@ const MobilePlayerCardSection = ({}) =>
             />
 
             <MobilePlayerCard
+
                 data={playerInfo.white.mid}
+
                 inverted={true}
             />
 

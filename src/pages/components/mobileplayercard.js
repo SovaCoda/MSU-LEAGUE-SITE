@@ -1,4 +1,3 @@
-
 const MobilePlayerCard = ({data, inverted}) => {
     return(
         <div class={`flex flex-col p-1 m-1 shadow-lg h-28 ${
