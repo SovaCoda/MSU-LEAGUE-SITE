@@ -89,7 +89,7 @@ const PlayerCardSection = () => {
                 </div>
                
                 <div class="flex flex-col">
-                    <text class="text-3xl font-bold text-red-800 text-center" >WHITE</text>
+                    <text class="text-3xl font-bold mt-8 text-red-800 text-center" >WHITE</text>
                     <PlayerCard
                         data={playerInfo.white.top}
                         onExpand={handleInvertedExpand}
