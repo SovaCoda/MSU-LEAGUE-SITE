@@ -1,80 +1,51 @@
 import MobilePlayerCard from "./mobileplayercard"
+import playerInfo from "../playerinfo";
 
 const MobilePlayerCardSection = ({}) => 
 {
     return(
         <div class="flex-col sm:hidden">
             <MobilePlayerCard
-                summonerName="PARAGON OF HONOR"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.maroon.top}
             />
 
             <MobilePlayerCard
-                summonerName="PARAGON OF HONOR"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.maroon.jungle}
             />
 
             <MobilePlayerCard
-                summonerName="PARAGON OF HONOR"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.maroon.mid}
             />
             
             <MobilePlayerCard
-                summonerName="PARAGON OF HONOR"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.maroon.bottom}
             />
             <MobilePlayerCard
-                summonerName="PARAGON OF HONOR"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.maroon.support}
             />
 
             <MobilePlayerCard
-                summonerName="GHOSTCIRCLE"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.white.top}
                 inverted={true}
             />
 
             <MobilePlayerCard
-                summonerName="GHOSTCIRCLE"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.white.jungle}
                 inverted={true}
             />
 
             <MobilePlayerCard
-                summonerName="GHOSTCIRCLE"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.white.mid}
                 inverted={true}
             />
 
             <MobilePlayerCard
-                summonerName="GHOSTCIRCLE"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.white.bottom}
                 inverted={true}
             />
 
             <MobilePlayerCard
-                summonerName="GHOSTCIRCLE"
-                description={"Quinn Crothers, Paragonofhonor, is Maroon Team's starting mid lane player. A master of control mages, he excels at scaling late in games and setting the pace of teamfights."}
-                laneImage="./lanes/mid.png"
-                rankImage="./ranks/diamond.png"
+                data={playerInfo.white.support}
                 inverted={true}
             />
             
