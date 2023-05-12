@@ -33,7 +33,7 @@ export default function Home() {
       </div>
 
       <div class="md:flex md:flex-row-reverse flex-col justify-center mt-10 animate-fadeIn">
-        <div class="flex flex-col items-left mt-4 mb-12">
+        <div class="flex flex-col items-left mt-12 mb-4">
           <text class="md:text-4xl text-2xl font-bold text-red-800 md:text-top md:text-left text-top ml-4 mr-4" >Official MSU ESPORTS</text>
           <text class="text-xl text-red-800 text-top ml-4 mr-4 md:max-w-lg max-w-none" >MSU Esports will sometimes stream our tournament matches with commentators</text>
         </div>
@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       <div class="md:flex md:flex-row justify-center mt-6 animate-fadeIn">
-        <div class="flex flex-col items-start mt-4 mb-12">
+        <div class="flex flex-col items-start mt-12 mb-4">
           <text class="md:text-4xl text-2xl font-bold text-red-800 text-top ml-4 mr-4" >Caramel Heaven's Stream</text>
           <text class="text-xl text-red-800 text-top ml-4 mr-4 md:max-w-lg max-w-none" >Our adc, Caramel Heaven, streams some of the more minor games we play.</text>
         </div>

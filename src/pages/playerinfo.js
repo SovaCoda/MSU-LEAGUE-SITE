@@ -10,7 +10,7 @@ const playerInfo = {
         },
         jungle: {
             summonerName: 'IM ENTING',
-            description: "Chris PUT CHRIS' LAST NAME HERE , Im Enting, is Maroon Team's starting jungler. He is known for his ability to play carry junglers and snowball his team to victory.",
+            description: "Chris PUT CHRIS' LAST NAME HERE , Im Enting, is Maroon Team's starting jungler. He is known for his ability to play carry junglers and snowball his team to victory. Long text to extend mobile card.",
             rank: 'diamond',
             champions: ['jarvin', 'sejuani', 'maokai'],
             bannerGif: './gifs/JarvanBG.gif',

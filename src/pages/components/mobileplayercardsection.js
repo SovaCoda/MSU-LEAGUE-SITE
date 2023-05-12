@@ -4,7 +4,7 @@ import playerInfo from "../playerinfo";
 const MobilePlayerCardSection = ({}) => 
 {
     return(
-        <div class="flex-col sm:hidden">
+        <div class="grid grid-cols-1 gap-2 sm:hidden">
             <MobilePlayerCard
                 data={playerInfo.maroon.top}
             />
