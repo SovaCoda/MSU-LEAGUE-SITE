@@ -17,7 +17,7 @@ const InvertedExpandedPlayerCard = ({sharedExpanded, data}) => {
       }, [sharedExpanded]);
 
     return (
-        <div className={`sticky top-20 w-64 lg:w-96 pb-4 2xl:h-full h-1/2 justify-end bg-red-900 shadow-md rounded-lg opacity-100 ${
+        <div className={`sticky top-20 w-64 lg:w-96 pb-4 2xl:h-full h-1/2 justify-end bg-white shadow-md rounded-lg opacity-100 ${
             sharedExpanded ? 'animate-fadeInLeft' : 'animate-fadeOutRight'
         } ${
             visible ? 'block' : 'hidden'
@@ -38,10 +38,10 @@ const InvertedExpandedPlayerCard = ({sharedExpanded, data}) => {
                 </div>
             </div>
             <div className="flex ml-4">
-                <text className="text-2xl text-white font-bold text-left">{data.summonerName}</text>
+                <text className="text-2xl text-red-900 font-bold text-left">{data.summonerName}</text>
             </div>
             <div className="flex ml-4 mt-4">
-                <text className="text-md text-white text-left">{data.description}</text>
+                <text className="text-md text-red-900 text-left">{data.description}</text>
             </div>
         </div>
     );
