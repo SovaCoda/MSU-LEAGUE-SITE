@@ -6,13 +6,15 @@ export default function Home() {
     <>
     <div class="fixed top-0 left-0 w-screen h-screen z-[-1] bg-cover bg-center" style={{ backgroundImage: "url('/images/background2.jpg')" }}></div>
     <div className="relative min-h-screen w-full">
-      <div class="container flex items-center mt-4">
-        <div class="flex flex-col items-center">
-          <img src="./images/Logo.png" alt="logo" class="w-1/2 hover:scale-125 transition-all duration-300 cursor-pointer hidden md:block" />
+      <div class="flex items-end justify-start sm:h-96 h-44 bg-cover bg-center bg-[linear-gradient(to_top,rgba(0,0,0,0.7),rgba(255,255,255,0.2)),url('/images/Background.jpg')]">
+        <img src = "./images/msuesportslogo.jpg" alt="logo" class="sm:w-32 w-28 sm:ml-48 sm:mb-8" />
+        <div class="hidden sm:block border-l-2 border-white h-32 ml-4 mb-8"></div>
+        <div class="flex flex-col text-white sm:mx-4 sm:mb-8">
+          <div className="flex items-center ">
+            <text class="sm:text-7xl text-5xl text-center font-bold">LEAGUE </text> <text class="sm:text-5xl text-2xl ml-1">of</text>
+          </div>
+          <text class="sm:text-7xl text-5xl  font-bold">LEGENDS</text>
         </div>
-      </div>
-      <div class="container flex items-center justify-center mt-4 mx-auto">
-        <text class="text-7xl font-bold text-red-800 text-center" >MSU<br></br>League of Legends </text>
       </div>
       <div class="container flex items-center justify-center mt-48 mx-auto">
         <text class="sm:text-2xl text-lg font-bold text-red-800 text-center" >MEET OUR<br></br></text>
