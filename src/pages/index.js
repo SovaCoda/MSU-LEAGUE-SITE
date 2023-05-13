@@ -6,7 +6,7 @@ export default function Home() {
     <>
     <div class="fixed top-0 left-0 w-screen h-screen z-[-1] bg-cover bg-center" style={{ backgroundImage: "url('/images/background2.jpg')" }}></div>
     <div className="relative min-h-screen w-full">
-      <div class="flex items-end justify-start sm:h-96 h-44 bg-cover bg-center bg-[linear-gradient(to_top,rgba(0,0,0,0.7),rgba(255,255,255,0.2)),url('/images/Background.jpg')]">
+      <div class="flex items-end justify-start sm:h-64 h-44 bg-cover bg-center bg-[linear-gradient(to_top,rgba(0,0,0,0.7),rgba(255,255,255,0.2)),url('/images/Background.jpg')]">
         <img src = "./images/msuesportslogo.jpg" alt="logo" class="sm:w-32 w-28 sm:ml-[12vw] sm:mb-8" />
         <div class="hidden sm:block border-l-2 border-white h-32 ml-4 mb-8"></div>
         <div class="flex flex-col text-white sm:mx-4 sm:mb-8">
@@ -16,7 +16,7 @@ export default function Home() {
           <text class="sm:text-7xl text-5xl  font-bold">LEGENDS</text>
         </div>
       </div>
-      <div class="container flex items-center justify-center mt-48 mx-auto">
+      <div class="container flex items-center justify-center mt-36 mx-auto">
         <text class="sm:text-2xl text-lg font-bold text-red-800 text-center" >MEET OUR<br></br></text>
       </div>
       <div class="container flex items-center justify-center mt-0 mx-auto">
@@ -27,8 +27,7 @@ export default function Home() {
       <PlayerCardSection/>
       <MobilePlayerCardSection/>
 
-
-      <div class="flex items-center justify-center mt-48">
+      <div class="flex items-center justify-center sm:mt-40 mt-10">
         <img src="./images/youtubelogo.png" alt="logo" class="w-16" />
         <text class="sm:text-7xl text-4xl font-bold text-red-800 text-center ml-4 mr-4" >WATCH US LIVE</text>
         <img src="./images/twitchlogo.png" alt="logo" class="w-16" />
@@ -51,9 +50,7 @@ export default function Home() {
         </div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/bvrPENBoTmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class ="px-4 w-full h-64 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
       </div>
-
-      <br></br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br></br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      <text class="text-3xl text-white font-bold">this is some long stuff</text>
+      <div className="h-40"></div>
     </div>
     </>
   )
