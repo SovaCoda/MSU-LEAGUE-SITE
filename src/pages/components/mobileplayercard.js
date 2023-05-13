@@ -9,11 +9,11 @@ const MobilePlayerCard = ({data, inverted}) => {
                     inverted ? "text-red-900" : "text-white"
                 }`}>{data.summonerName}</text>
             </div>
-            <div class="flex h-full mx-2 mb-2 justify-around">
+            <div class="flex h-full mx-2 mb-2 ml-4 justify-between">
                 <div class="flex flex-col bg-black h-24 w-16 rounded">
                     <text class="text-white font-bold text-center text-sm p-1">PLACE<br></br>HOLDER</text>
                 </div>
-                <img src={"./ranks/" + data.rank + ".png"} className="w-20" />
+                <img src={"./ranks/" + data.rank + ".png"} className="w-16 self-end" />
                 <div class="flex space-x-2 mr-1 self-end">
                 {data.champions.map((champion, index) => {
                 return (
@@ -21,13 +21,10 @@ const MobilePlayerCard = ({data, inverted}) => {
                     key={index}
                     src={"./champions/" + champion + ".png"} 
                     alt="" 
-                    class="w-10 h-10 mb-1 justify-start"/>
+                    class="w-8 h-8 mb-1 justify-start"/>
                 )
                 })}
                 </div>
-                <div className={`self-end ${
-                    inverted ? "text-red-900" : "text-white"
-                }`}>Expand</div>
             </div> 
         </div>
     );
