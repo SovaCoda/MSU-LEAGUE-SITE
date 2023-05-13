@@ -50,7 +50,7 @@ const PlayerCardSection = () => {
     };
 
     return (
-        <div class="sm:grid grid-cols-3 mt-8 direction-rtr hidden">
+        <div class="sm:grid grid-cols-3 mt-24 direction-rtr hidden">
             <ExpandedPlayerCard sharedExpanded={expanded} data={expandedData}/>
             <div class="grid 2xl:grid-cols-2 xl:grid-cols-1 w-full mx-auto col-span-1 col-start-2 ">
                 <div class="flex flex-col">
