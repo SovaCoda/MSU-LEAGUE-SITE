@@ -16,7 +16,7 @@ export default function Home() {
           <text class="sm:text-7xl text-5xl  font-bold">LEGENDS</text>
         </div>
       </div>
-      <div class="container flex items-center justify-center mt-36 mx-auto">
+      <div class="container flex items-center justify-center mt-32 sm:mt-36 mx-auto">
         <text class="sm:text-2xl text-lg font-bold text-red-800 text-center" >MEET OUR<br></br></text>
       </div>
       <div class="container flex items-center justify-center mt-0 mx-auto">
