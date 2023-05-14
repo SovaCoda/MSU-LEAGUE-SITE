@@ -1,12 +1,12 @@
 import PlayerCardSection from "./components/playercardsection"
 import MobilePlayerCardSection from "./components/mobileplayercardsection"
-
+import NewsSection from "./components/newssection"
 export default function Home() {
   return (
     <>
     <div class="fixed top-0 left-0 w-screen h-screen z-[-1] bg-cover bg-center" style={{ backgroundImage: "url('/images/background2.jpg')" }}></div>
     <div className="relative min-h-screen w-full">
-      <div class="flex items-end justify-start sm:h-64 h-44 bg-cover bg-center bg-[linear-gradient(to_top,rgba(0,0,0,0.7),rgba(255,255,255,0.2)),url('/images/Background.jpg')]">
+      <div class="flex items-end justify-start sm:h-96 h-44 bg-cover bg-center bg-[linear-gradient(to_top,rgba(0,0,0,1),rgba(255,255,255,0)),url('/images/Background.jpg')]">
         <img src = "./images/msuesportslogo.jpg" alt="logo" class="sm:w-32 w-28 sm:ml-[12vw] sm:mb-8" />
         <div class="hidden sm:block border-l-2 border-white h-32 ml-4 mb-8"></div>
         <div class="flex flex-col text-white sm:mx-4 sm:mb-8">
@@ -16,13 +16,16 @@ export default function Home() {
           <text class="sm:text-7xl text-5xl  font-bold">LEGENDS</text>
         </div>
       </div>
+      <div class="flex items-start h-12 bg-gray-100 shadow-lg"> </div>.
+
+      <NewsSection/>
+
       <div class="container flex items-center justify-center mt-32 sm:mt-36 mx-auto">
         <text class="sm:text-2xl text-lg font-bold text-red-800 text-center" >MEET OUR<br></br></text>
       </div>
       <div class="container flex items-center justify-center mt-0 mx-auto">
         <text class="sm:text-7xl text-5xl font-bold text-red-800 text-center" >SUMMONERS</text>
       </div>
-
       
       <PlayerCardSection/>
       <MobilePlayerCardSection/>
