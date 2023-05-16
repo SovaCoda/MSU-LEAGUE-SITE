@@ -2,7 +2,7 @@ import { useState } from "react";
 import ExpandedPlayerCard from "./expandedplayercard";
 import InvertedExpandedPlayerCard from "./invertedexpandedplayercard";
 import PlayerCard from "./playercard";
-import playerInfo from "../playerinfo";
+import playerInfo from "./playerinfo";
 
 const PlayerCardSection = () => {
     const [expanded, setExpanded] = useState(false);

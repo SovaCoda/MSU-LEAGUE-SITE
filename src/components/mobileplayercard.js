@@ -5,7 +5,7 @@ const MobilePlayerCard = ({data, inverted}) => {
         }`}>
             <div class="flex justify-start">
                 <img src={"./lanes/" + data.role + ".png"} alt="" class="w-8 mb-1 mr-1"/>
-                <text class={`text-2xl font-bold mx-1 ${
+                <text class={`text-2xl font-bold mx-1" ${
                     inverted ? "text-red-900" : "text-white"
                 }`}>{data.summonerName}</text>
             </div>

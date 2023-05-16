@@ -1,6 +1,8 @@
-import PlayerCardSection from "./components/playercardsection"
-import MobilePlayerCardSection from "./components/mobileplayercardsection"
-import NewsSection from "./components/newssection"
+import PlayerCardSection from "../components/playercardsection"
+import MobilePlayerCardSection from "../components/mobileplayercardsection"
+import NewsSection from "../components/newssection"
+import NavBar from "../components/navbar"
+
 export default function Home() {
   return (
     <>
@@ -16,7 +18,8 @@ export default function Home() {
           <text class="sm:text-7xl text-5xl  font-bold">LEGENDS</text>
         </div>
       </div>
-      <div class="flex items-start h-12 bg-gray-100 shadow-lg"> </div>.
+      
+      <NavBar/>
 
       <NewsSection/>
 

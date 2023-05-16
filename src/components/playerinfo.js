@@ -1,8 +1,8 @@
 const playerInfo = {
     maroon: {
         top: {
-            summonerName: 'DRAGCOCKS',
-            description: "Matt Wu, Dragcocks, is Maroon Team's starting top laner. He is known for his ability to play duelists and split push to victory.",
+            summonerName: 'DRAGOXX',
+            description: "Matt Wong, Dragcocks, is Maroon Team's starting top laner. He is known for his ability to play duelists and split push to victory.",
             rank: 'challenger',
             champions: ['camille', 'fiora', 'jax'],
             bannerGif: './gifs/CamilleBG.gif',

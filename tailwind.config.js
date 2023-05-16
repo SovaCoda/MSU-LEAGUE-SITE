@@ -34,7 +34,7 @@ module.exports = {
         fadeOutRight: {
           '0%': { opacity: 0.9, transform: 'translatex(0px)' },
           '100%': { opacity: 0, transform: 'translatex(40px)' },
-        }
+        },
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in-out',

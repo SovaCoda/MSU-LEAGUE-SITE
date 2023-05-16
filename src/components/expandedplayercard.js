@@ -41,6 +41,9 @@ const ExpandedPlayerCard = ({sharedExpanded, data}) => {
             <div className="flex ml-4 mt-4">
                 <text className="text-md text-white text-left">{data.description}</text>
             </div>
+            <a className="flex ml-4 mt-4 cursor-pointer" href={data.summonerName !== undefined ? "players/" + data.summonerName.replace(/\s/g, "").toLowerCase() : ""}>
+                <text className="text-md text-white cursor-click">Learn more about this summoner</text>
+            </a>
         </div>
     );
 }

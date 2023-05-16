@@ -1,5 +1,5 @@
 import MobilePlayerCard from "./mobileplayercard"
-import playerInfo from "../playerinfo";
+import playerInfo from "./playerinfo";
 
 const MobilePlayerCardSection = ({}) => 
 {
