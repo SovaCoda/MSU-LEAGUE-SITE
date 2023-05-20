@@ -1,36 +1,18 @@
 import NavBar from "../../components/navbar";
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://bananaox:"  + process.env.MONGO_PASSWORD + "@cluster0.ronxl1c.mongodb.net/?retryWrites=true&w=majority";
+import Game from "../../components/game";
 
-const Client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
 export async function getServerSideProps() {
-    try {
-      // Connect the client to the server	(optional starting in v4.7)
-      await Client.connect();
-      // Send a ping to confirm a successful connection
-      await Client.db("admin").command({ ping: 1 });
-      console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    } finally {
-      // Ensures that the client will close when you finish/error
-      await Client.close();
-    }
-    return {
-      props: {},
-    };
-}  
+    const res = await fetch("http://localhost:3000/api/players?name=ParagonOfHonor");
+    const player = await res.json();
+    return { props: { player } };
+}
 
-export default function Paragonofhonor() {
+export default function Paragonofhonor({player}) {
     return (
         <>
         <div class="fixed top-0 left-0 w-screen h-screen z-[-1] bg-cover bg-center opacity-25" style={{ backgroundImage: "url('/images/background2.jpg')" }}></div>
         <div class="flex  sm:h-96 h-44 bg-cover bg-center bg-red-800 text-white">
-            <text className="text-5xl mt-auto font-bold m-4">Paragon Of Honor</text>
+            <text className="text-5xl mt-auto font-bold m-4">{player.name}</text>
             <div class="flex items-center mt-auto text-center  text-4xl  font-bold  justify-center w-36 h-56 bg-cover bg-center bg-black">
                 Place<br></br>Holder
              </div>
@@ -47,9 +29,14 @@ export default function Paragonofhonor() {
                 for fun, Quinn jumped at the opportunity to play for MSU's league team being one of the first high ranked mid laners at diamond II. </text>
                 <text className="text-2xl text-red-800 sm:justify-start justify-center text-left mt-2">The League of Legends program here at MSU wouldn't be what it is today if not for his passion for the game and a genuine wish for the team to always be improving. </text>
             </div>
-            <div className="flex flex-col m-4 animate-fadeInRight delay-100">
+            <div className="flex flex-col gap-2 animate-fadeInRight delay-100 ">
                 <text className="text-5xl text-red-800 justify-center  mx-auto  font-bold"> Latest Games </text>
-                <text className="text-2xl text-red-800 justify-center  mx-auto "> Quinn's latest games will go here </text>
+                <Game
+                data={{ win: true, champion: "Anivia", keystone: "electrocute", secondary: "resolve", 
+                kills: 10, deaths: 2, assists: 5, creepScore: 162 , summonerSpell0: "flash", summonerSpell1: "ignite" , 
+                dated: "2 Days ago", queueType: "Ranked Solo" , duration: "17:12" }}
+                />
+
             </div>
         </div>
         </>
