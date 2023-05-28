@@ -1,6 +1,7 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://bananaox:"  + process.env.MONGO_PASSWORD + "@cluster0.ronxl1c.mongodb.net/?retryWrites=true&w=majority";
 
+
 let db;
 
 async function connectToDb() {
@@ -20,5 +21,9 @@ async function connectToDb() {
 function getDb() {
   return db;
 }
+
+
+  
+
 
 export { connectToDb, getDb };

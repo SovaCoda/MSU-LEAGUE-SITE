@@ -31,11 +31,9 @@ export default function Paragonofhonor({player}) {
             </div>
             <div className="flex flex-col gap-2 animate-fadeInRight delay-100 ">
                 <text className="text-5xl text-red-800 justify-center  mx-auto  font-bold"> Latest Games </text>
-                <Game
-                data={{ win: true, champion: "Anivia", keystone: "electrocute", secondary: "resolve", 
-                kills: 10, deaths: 2, assists: 5, creepScore: 162 , summonerSpell0: "flash", summonerSpell1: "ignite" , 
-                dated: "2 Days ago", queueType: "Ranked Solo" , duration: "17:12" }}
-                />
+                {player.games.map((game) => (
+                    <Game data={game}/>
+                ))}
 
             </div>
         </div>
