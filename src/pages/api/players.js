@@ -1,4 +1,6 @@
 import { connectToDb, getDb } from ".//dbinfo";
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 import axios from "axios";
 
 const RIOT_API_KEY = process.env.RIOT_API_KEY;
@@ -35,6 +37,71 @@ function cullToEssential(match, player) {
     }
 }
 
+async function createPlayer(playerName) {
+    const playerData = await fetchPlayerData(playerName);
+    const player = prisma.Players.create({
+        data: {
+            summoner_name: playerData,
+            summoner_puuid: playerData.puuid,
+            summoner_level: playerData.summonerLevel,
+        }
+    })
+    return player;
+}
+
+
+async function findDBPlayer(playerName) {
+    var players = await prisma.Players.findMany();
+    const filteredPlayers = players.filter(players =>
+        players.summoner_name.replace(/\s/g, '').includes(playerName)
+      );
+    var player = filteredPlayers[0];
+    if (player == null) {
+        console.log("Player not found in database, creating new player");
+        player = createPlayer(playerName);
+    }
+    return (player);
+}
+
+async function findDBMatches(player) {
+    var matches = await prisma.Matches.findMany();
+    const filteredMatches = matches.filter(matches =>
+        matches.summoner_name.replace(/\s/g, '').includes(player.summoner_name)
+      );
+    return (filteredMatches);
+}
+
+async function fetchMatchInfo(matchId) {
+    const url = `https://api.riotgames.com/lol/match/v4/matches/${matchId}`;
+    const response = await axios.get(url, {
+      headers: { 'X-Riot-Token': RIOT_API_KEY },
+    });
+    
+    return response.data;
+}
+
+async function fetchPlayerData(name) {
+    const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}`;
+    const response = await axios.get(url, {
+      headers: { 'X-Riot-Token': RIOT_API_KEY },
+    });
+    console.log(response.data)
+    return response.data;
+  }
+
+
+export default async function handler(req, res) {
+    try {
+        const playerData = await findDBPlayer(req.query.name);
+        res.status(200).json(playerData); 
+    }
+    catch(error) {
+        debugLog(error);
+        res.status(500).json({ error: 'An error occurred' }); 
+    }
+}
+
+/*
 export default async function handler(req, res) {
     try {
         const {name} = req.query;
@@ -43,6 +110,7 @@ export default async function handler(req, res) {
         }
         const db = getDb();
         const collection = db.collection("players");
+        console.log("Name is: " + name)
         let player = await collection.findOne({ name });
         
         if (!player) {
@@ -143,3 +211,4 @@ export default async function handler(req, res) {
         res.status(500).json({ message: error.message });
     }
 }
+*/

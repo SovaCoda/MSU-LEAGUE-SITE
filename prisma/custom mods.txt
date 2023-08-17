@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Matches {
+  id                   String @id @default(auto()) @map("_id") @db.ObjectId
+  match_id             String
+  match_summoner_puuid String  @db.ObjectId
+  players Players @relation(fields: [match_summoner_puuid], references: [id])
+}
+
+model Players {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  summoner_level Int
+  summoner_name  String @unique
+  summoner_puuid String @unique
+  matches       Matches[]
+}
