@@ -50,11 +50,11 @@ const PlayerCardSection = () => {
     };
 
     return (
-        <div class="sm:grid grid-cols-3 mt-24 direction-rtr hidden">
+        <div className="sm:grid grid-cols-3 mt-24 direction-rtr hidden">
             <ExpandedPlayerCard sharedExpanded={expanded} data={expandedData}/>
-            <div class="grid 2xl:grid-cols-2 xl:grid-cols-1 w-full mx-auto col-span-1 col-start-2 ">
-                <div class="flex flex-col">
-                    <text class="text-3xl font-bold text-red-800 text-center">MAROON</text>
+            <div className="grid 2xl:grid-cols-2 xl:grid-cols-1 w-full mx-auto col-span-1 col-start-2 ">
+                <div className="flex flex-col">
+                    <text className="text-3xl font-bold text-red-800 text-center">MAROON</text>
                     <PlayerCard
                         data={playerInfo.maroon.top}
                         onExpand={handleExpand}
@@ -88,8 +88,8 @@ const PlayerCardSection = () => {
 
                 </div>
                
-                <div class="flex flex-col">
-                    <text class="text-3xl font-bold mt-8 text-red-800 text-center" >WHITE</text>
+                <div className="flex flex-col">
+                    <text className="text-3xl font-bold mt-8 text-red-800 text-center" >WHITE</text>
                     <PlayerCard
                         data={playerInfo.white.top}
                         onExpand={handleInvertedExpand}
