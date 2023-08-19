@@ -1,6 +1,6 @@
 const MobilePlayerCard = ({data, inverted}) => {
     return(
-        <div className={`flex flex-col p-3 m-2 rounded shadow-lg ${
+        <div className={`flex flex-col p-3 m-2 mx-4 rounded shadow-lg ${
             inverted ? "bg-white" : "bg-red-900"
         }`}>
             <div className="flex justify-start">
