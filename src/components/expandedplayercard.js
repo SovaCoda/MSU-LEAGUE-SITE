@@ -32,7 +32,7 @@ const ExpandedPlayerCard = ({sharedExpanded, data}) => {
                     <div className="bg-black rounded-full w-24 h-24 mr-8 ml-8 flex items-center justify-center shadow-2xl">
                         <p className="text-white font-bold text-center">PLACE<br></br>HOLDER</p>
                     </div>
-                    <img src={"./ranks/" + data.rank + ".png"} className="w-20" />
+                    <img src={"./leaguecontent/ranks/" + data.rank + ".png"} className="w-20" />
                 </div>
             </div>
             <div className="flex ml-4">
