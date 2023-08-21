@@ -1,5 +1,5 @@
 import NavBar from "../../components/navbar";
-import Game from "../../components/game";
+import Matches from "../../components/matches";
 
 export async function getServerSideProps() {
     const res = await fetch("http://localhost:3000/api/players?name=Yubs");
@@ -29,9 +29,9 @@ export default function Yubs({player}) {
         </div>
         <div className="flex flex-col gap-2 animate-fadeInRight delay-100 ">
             <text className="text-5xl text-red-800 justify-center  mx-auto  font-bold"> Latest Games </text>
-            {/* {player.games.map((game) => (
-                <Game data={game}/>
-            ))} */}
+            <Matches
+                    puuid={player.summoner_puuid}
+            />
 
         </div>
     </div>

@@ -16,32 +16,13 @@ function debugLog(error) {
     }
 }
 
-function cullToEssential(match, player) {
-    let mainCharacter = match.data.info.participants.find(p => p.summonerName === player.name);
-    return {
-        gameId: match.data.metadata.matchId,
-        gameMode: match.data.info.gameMode,
-        queueId: match.data.info.queueId,
-        duration: match.data.info.gameDuration,
-        gameEndTimestamp: match.data.info.gameEndTimestamp,
-        win: mainCharacter ? mainCharacter.win : undefined,
-        kills: mainCharacter ? mainCharacter.kills : undefined,
-        deaths: mainCharacter ? mainCharacter.deaths : undefined,
-        assists: mainCharacter ? mainCharacter.assists : undefined,
-        cs: mainCharacter ? mainCharacter.totalMinionsKilled : undefined,
-        summonerSpell1Id: mainCharacter ? mainCharacter.summoner1Id : undefined,
-        summonerSpell2Id: mainCharacter ? mainCharacter.summoner2Id : undefined,
-        championId: mainCharacter ? mainCharacter.championId : undefined,
-        keystoneId: mainCharacter ? mainCharacter.perks.styles[0].selections[0].perk : undefined,
-        secondaryRuneId: mainCharacter ? mainCharacter.perks.styles[1].style : undefined,
-    }
-}
+
 
 async function createPlayer(playerName) {
     const playerData = await fetchPlayerData(playerName);
     const player = prisma.Players.create({
         data: {
-            summoner_name: playerData,
+            summoner_name: playerData.name,
             summoner_puuid: playerData.puuid,
             summoner_level: playerData.summonerLevel,
         }

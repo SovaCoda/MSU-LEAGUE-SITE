@@ -8,9 +8,24 @@ datasource db {
 }
 
 model Matches {
-  id                   String @id @default(auto()) @map("_id") @db.ObjectId
-  match_id             String
-  match_summoner_puuid String
+  id               String  @id @default(auto()) @map("_id") @db.ObjectId
+  assists          Int
+  championId       Int
+  cs               Int
+  deaths           Int
+  duration         Float
+  gameEndTimestamp Float
+  gameId           Float
+  gameMode         String
+  keystoneId       Int
+  kills            Int
+  matchId          String
+  puuid            String
+  queueId          Int
+  secondaryRuneId  Int
+  summonerSpell1Id Int
+  summonerSpell2Id Int
+  win              Boolean
 }
 
 model Players {
