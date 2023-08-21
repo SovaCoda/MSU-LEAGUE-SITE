@@ -1,6 +1,6 @@
 const MobilePlayerCard = ({data, inverted}) => {
     return(
-        <div className={`flex flex-col p-3 m-2 mx-4 rounded shadow-lg ${
+        <a href={data.summonerName !== undefined ? "players/" + data.summonerName.replace(/\s/g, "").toLowerCase() : ""} className={`flex flex-col p-3 m-2 mx-4 rounded shadow-lg ${
             inverted ? "bg-white" : "bg-red-900"
         }`}>
             <div className="flex justify-start">
@@ -26,7 +26,7 @@ const MobilePlayerCard = ({data, inverted}) => {
                 })}
                 </div>
             </div> 
-        </div>
+        </a>
     );
 }
 
