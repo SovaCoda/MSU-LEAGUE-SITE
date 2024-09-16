@@ -24,7 +24,7 @@ export default function Home() {
 
       <NewsSection/>
 
-      <div className="container flex items-center justify-center mt-32 sm:mt-36 mx-auto">
+      <div className="container flex items-center justify-center mt-20 sm:mt-36 mx-auto">
         <text className="sm:text-2xl text-lg font-bold text-red-800 text-center" >MEET OUR<br></br></text>
       </div>
       <div className="container flex items-center justify-center mt-0 mx-auto">
@@ -34,28 +34,28 @@ export default function Home() {
       <PlayerCardSection/>
       <MobilePlayerCardSection/>
 
-      <div className="flex items-center justify-center sm:mt-40 mt-10">
+      <div className="flex items-center justify-center sm:mt-40 mt-20">
         <img src="./images/youtubelogo.png" alt="logo" className="w-16" />
         <text className="sm:text-7xl text-4xl font-bold text-red-800 text-center ml-4 mr-4" >WATCH US LIVE</text>
         <img src="./images/twitchlogo.png" alt="logo" className="w-16" />
       </div>
 
-      <div className="md:flex md:flex-row-reverse flex-col justify-center mt-10 animate-fadeIn">
+      <div className="md:flex md:flex-row-reverse flex-col justify-center sm:mt-10 mt-16 animate-fadeIn">
         <div className="flex flex-col items-left mt-12 mb-4">
-          <text className="md:text-4xl text-2xl font-bold text-red-800 md:text-top md:text-left text-top ml-4 mr-4" >Official MSU ESPORTS</text>
-          <text className="text-xl text-red-800 text-top ml-4 mr-4 md:max-w-lg max-w-none" >MSU Esports will sometimes stream our tournament matches with commentators</text>
+          <text className="md:text-4xl text-2xl font-bold text-red-800 md:text-top md:text-left text-top sm:mx-4 mx-6" >Official MSU ESPORTS</text>
+          <text className="text-xl text-red-800 text-top sm:mx-4 mx-6 md:max-w-lg max-w-none" >MSU Esports will sometimes stream our tournament matches with commentators</text>
         </div>
         <div>
-          <iframe src="https://player.twitch.tv/?channel=msu_esports&parent=localhost" frameBorder="0" allowFullScreen={true} scrolling="no" className="w-full h-64 px-4 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
+          <iframe src="https://player.twitch.tv/?channel=msu_esports&parent=localhost" frameBorder="0" allowFullScreen={true} scrolling="no" className="w-full h-64 sm:px-4 px-6 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
         </div>
       </div>
 
       <div className="md:flex md:flex-row justify-center mt-6 animate-fadeIn">
         <div className="flex flex-col items-start mt-12 mb-4">
-          <text className="md:text-4xl text-2xl font-bold text-red-800 text-top ml-4 mr-4" >Caramel Heaven's Stream</text>
-          <text className="text-xl text-red-800 text-top ml-4 mr-4 md:max-w-lg max-w-none" >Our adc, Caramel Heaven, streams some of the more minor games we play.</text>
+          <text className="md:text-4xl text-2xl font-bold text-red-800 text-top sm:mx-4 mx-6" >Caramel Heaven's Stream</text>
+          <text className="text-xl text-red-800 text-top sm:mx-4 mx-6 md:max-w-lg max-w-none" >Our adc, Caramel Heaven, streams some of the more minor games we play.</text>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/bvrPENBoTmg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true} className ="px-4 w-full h-64 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bvrPENBoTmg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true} className ="sm:px-4 px-6 w-full h-64 md:w-[28rem] md:h-72 lg:w-[32rem] lg:h-80 xl:w-[40rem] xl:h-96"></iframe>
       </div>
       <div className="h-40"></div>
     </div>
